@@ -1,0 +1,54 @@
+<div align="center">
+<p><font size="4" face="Verdana, Arial, Helvetica, sans-serif"><strong>Become
+  a Member!</strong></font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Join our website
+  and enjoy the benefits of becoming a member! or<a href="index.php"> Return to Home Screen...</a></p>
+<?php
+
+if (isset($errors) && ($errors == true)){
+echo "<p align=\"center\"><font size=\"2\" face=\"Verdana, Arial, Helvetica, sans-serif\" color=\"#FF0000\">$errors</font></p>\n";
+}
+?>
+<form method="post" action="join.php">
+  <table width="50%" border="1" align="center" cellpadding="4" cellspacing="0">
+    <tr>
+      <td width="200" align="left" valign="top" nowrap><font size="2" face="Verdana, Arial, Helvetica, sans-serif">First Name</font></td>
+      <td width="179" align="left" valign="top"><input name="first_name" type="text" id="first_name" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name'];?>"></td>
+    </tr>
+    <tr>
+      <td width="200" align="left" valign="top" nowrap><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Last Name</font></td>
+      <td align="left" valign="top"><input name="last_name" type="text" id="last_name" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name'];?>"></td>
+    </tr>
+    <tr>
+      <td width="200" align="left" valign="top" nowrap><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Email Address</font></td>
+      <td align="left" valign="top"><input name="email_address" type="text" id="email_address" value="<?php if (isset($_POST['email_address'])) echo $_POST['email_address'];?>"></td>
+    </tr>
+    <tr>
+      <td align="left" valign="top" nowrap><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Verify Email Address</font></td>
+      <td align="left" valign="top"><input name="email_address2" type="text" id="email_address3" value="<?php if (isset($_POST['email_address2'])) echo$_POST['email_address2'];?>"></td>
+    </tr>
+    <tr>
+      <td width="200" align="left" valign="top" nowrap><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Desired Username</font></td>
+      <td align="left" valign="top"><input name="username" type="text" id="username" value="<?php if (isset($_POST['username'])) echo $_POST['username'];?>"></td>
+    </tr>
+    <tr>
+      <td width="200" align="left" valign="top" nowrap><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Password</font></td>
+      <td align="left" valign="top"><input name="password" type="password" id="password" value="<?php if (isset($_POST['password'])) echo $_POST['password'];?>"></td>
+    </tr>
+    <tr>
+      <td width="200" align="left" valign="top" nowrap><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Password Again</font></td>
+      <td align="left" valign="top"><input name="password2" type="password" id="password2" value="<?php if (isset($_POST['password2'])) echo $_POST['password2'];?>"></td>
+    </tr>
+    <tr>
+      <td width="200" align="left" valign="top" nowrap><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Tell us about yourself!</font></td>
+      <td align="left" valign="top"><textarea name="bio"><?php if (isset($_POST['bio'])) echo $_POST['bio'];?></textarea></td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">&nbsp;</td>
+      <td align="left" valign="top"><input name="req" type="hidden" id="req" value="process">
+        <input type="submit" name="Submit" value="Submit Information!"></td>
+    </tr>
+  </table>
+	<a href="index.php">Return to Home Screen</a>
+</form>
+</div>

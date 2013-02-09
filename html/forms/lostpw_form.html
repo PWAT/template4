@@ -1,0 +1,20 @@
+<div align="center">
+<p><font size="4" face="Verdana, Arial, Helvetica, sans-serif"><strong>Reset My
+  Password</strong></font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">If you have lost your password,
+  you may enter your email address below and a new password will be sent to your
+  email address.</font></p>
+<form name="form1" method="post" action="lostpw.php">
+  <table width="42%" border="0" cellspacing="0" cellpadding="4">
+    <tr>
+      <td width="20%" nowrap><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Your
+        Email Address:</font></td>
+      <td width="21%"><input name="email_address" type="text" id="email_address" value="<?php if (isset($_POST['email_address'])) echo $_POST['email_address'];?>" >
+      </td>
+      <td width="59%"><input name="req" type="hidden" id="req" value="recover">
+        <input name="Go!" type="submit" id="Go!" value="Go!"></td>
+    </tr>
+  </table>
+	<a href="index.php">Return to Home Screen</a>
+</form>
+</div>

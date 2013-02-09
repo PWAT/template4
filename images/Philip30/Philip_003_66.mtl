@@ -1,0 +1,15 @@
+# Produced by Dimensional Imaging OBJ exporter
+# http://www.di3d.com
+#
+#
+newmtl Philip_003_66
+Ka  0.154015 0.128428 0.149052
+Kd  0.770074 0.64214 0.745262
+Ks  0.47 0.47 0.47
+d 1
+Ns 0
+illum 2
+map_Kd Philip_003_66.jpg
+#
+#
+# EOF
